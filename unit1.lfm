@@ -1,0 +1,93 @@
+object Form1: TForm1
+  Left = 688
+  Height = 376
+  Top = 258
+  Width = 320
+  Caption = 'Авторизация'
+  ClientHeight = 376
+  ClientWidth = 320
+  Color = clActiveCaption
+  OnCreate = FormCreate
+  LCLVersion = '1.4.4.0'
+  object Edit1: TEdit
+    Left = 104
+    Height = 28
+    Top = 141
+    Width = 202
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 104
+    Height = 28
+    Top = 216
+    Width = 202
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 64
+    Height = 25
+    Top = 302
+    Width = 196
+    Caption = 'Войти'
+    Color = clNone
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -23
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 23
+    Top = 141
+    Width = 58
+    Caption = 'Логин'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 23
+    Top = 216
+    Width = 66
+    Caption = 'Пароль'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 64
+    Height = 35
+    Top = 40
+    Width = 177
+    Caption = 'Авторизация'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Color = clBlack
+    Font.Height = -30
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+end

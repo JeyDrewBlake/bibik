@@ -1,0 +1,164 @@
+object Form2: TForm2
+  Left = 546
+  Height = 283
+  Top = 261
+  Width = 265
+  Caption = 'Меню'
+  ClientHeight = 283
+  ClientWidth = 265
+  Color = clActiveCaption
+  OnCreate = FormCreate
+  LCLVersion = '1.4.4.0'
+  object Button2: TButton
+    Left = 72
+    Height = 25
+    Top = 144
+    Width = 123
+    Caption = 'АвторКниги'
+    OnClick = Button2Click
+    TabOrder = 0
+  end
+  object Button3: TButton
+    Left = 72
+    Height = 25
+    Top = 184
+    Width = 123
+    Caption = 'Книги'
+    OnClick = Button3Click
+    TabOrder = 1
+  end
+  object Button4: TButton
+    Left = 72
+    Height = 25
+    Top = 224
+    Width = 123
+    Caption = 'Разделы'
+    OnClick = Button4Click
+    TabOrder = 2
+  end
+  object Button5: TButton
+    Left = 72
+    Height = 25
+    Top = 24
+    Width = 123
+    Caption = 'Пользователи'
+    OnClick = Button5Click
+    TabOrder = 3
+  end
+  object PageControl1: TPageControl
+    Left = 984
+    Height = 424
+    Top = 120
+    Width = 637
+    ActivePage = TabSheet1
+    TabIndex = 0
+    TabOrder = 4
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      ClientHeight = 391
+      ClientWidth = 629
+      object Button6: TButton
+        Left = 72
+        Height = 25
+        Top = 352
+        Width = 480
+        Caption = 'Журнал'
+        OnClick = Button6Click
+        TabOrder = 0
+      end
+    end
+    object TabSheet2: TTabSheet
+      Caption = 'TabSheet2'
+    end
+  end
+  object Button1: TButton
+    Left = 72
+    Height = 25
+    Top = 104
+    Width = 123
+    Caption = 'Авторы'
+    OnClick = Button1Click
+    TabOrder = 5
+  end
+  object Button7: TButton
+    Left = 72
+    Height = 25
+    Top = 64
+    Width = 123
+    Caption = 'Журнал'
+    OnClick = Button6Click
+    TabOrder = 6
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'номер_чит_билета'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'Фамилия'
+        DataType = ftString
+        Precision = -1
+        Size = 150
+      end    
+      item
+        Name = 'Имя'
+        DataType = ftString
+        Precision = -1
+        Size = 150
+      end    
+      item
+        Name = 'Отчество'
+        DataType = ftString
+        Precision = -1
+        Size = 150
+      end    
+      item
+        Name = 'номер_телефона'
+        DataType = ftFixedChar
+        Precision = -1
+        Size = 150
+      end    
+      item
+        Name = 'Адрес'
+        DataType = ftString
+        Precision = -1
+        Size = 300
+      end>
+    Database = MySQL50Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from users;'
+    )
+    Params = <>
+    left = 320
+    top = 16
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQL50Connection1
+    left = 320
+    top = 144
+  end
+  object MySQL50Connection1: TMySQL50Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'bibi'
+    KeepConnection = False
+    Password = 'user'
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    CharSet = 'utf8'
+    HostName = '127.0.0.1'
+    LogEvents = []
+    left = 40
+    top = 16
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    left = 320
+    top = 80
+  end
+end
